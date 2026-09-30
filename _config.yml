@@ -1,0 +1,102 @@
+theme: jekyll-theme-chirpy
+
+lang: ko-KR
+timezone: Asia/Seoul
+
+title: YJ.DEV
+tagline: Backend Engineering Notes
+description: >-
+  백엔드 개발, 데이터베이스, 아키텍처, 인프라와 프로젝트 경험을 기록합니다.
+
+url: "https://yj901010.github.io"
+baseurl: ""
+
+github:
+  username: yj901010
+
+social:
+  name: YJ
+  links:
+    - https://github.com/yj901010
+
+theme_mode:
+
+toc: true
+
+comments:
+  provider:
+
+assets:
+  self_host:
+    enabled: false
+
+pwa:
+  enabled: true
+  cache:
+    enabled: true
+
+paginate: 10
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: false
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
