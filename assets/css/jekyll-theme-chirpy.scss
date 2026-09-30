@@ -1,0 +1,79 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+:root {
+  --yj-accent: #4f7cff;
+}
+
+#sidebar .site-title a {
+  letter-spacing: -0.04em;
+}
+
+#sidebar .site-subtitle {
+  line-height: 1.45;
+}
+
+.yj-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.yj-project-card {
+  display: block;
+  padding: 1.25rem;
+  border: 1px solid var(--main-border-color);
+  border-radius: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.yj-project-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--yj-accent);
+}
+
+.yj-project-card h3 {
+  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.yj-project-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--yj-accent);
+}
+
+.yj-stack {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.72;
+}
+
+#post-list .card-wrapper {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+#post-list .card-title {
+  letter-spacing: -0.025em;
+}
+
+@media (max-width: 768px) {
+  .yj-project-grid {
+    grid-template-columns: 1fr;
+  }
+}
