@@ -1,6 +1,7 @@
 ---
 title: "REST API를 다시 정리하며: URL보다 중요한 리소스와 HTTP Method"
-date: 2026-10-01 11:14:00 +0900
+date: 2023-09-13
+last_modified_at: 2026-10-01
 categories: [Backend, HTTP]
 tags: [rest, http, api, spring]
 description: 과거 Spring REST 학습 노트를 바탕으로 URL 중심 설계에서 리소스와 HTTP Method 중심 설계로 관점을 다시 정리합니다.
