@@ -1,0 +1,30 @@
+name: Inspect Velog RSS
+
+on:
+  push:
+    paths:
+      - ".github/workflows/inspect-velog.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Velog RSS
+        run: |
+          python - <<'PY'
+          import urllib.request, xml.etree.ElementTree as ET
+          url = "https://v2.velog.io/rss/@joker901010"
+          data = urllib.request.urlopen(url, timeout=30).read()
+          root = ET.fromstring(data)
+          for item in root.findall("./channel/item"):
+              title = item.findtext("title")
+              link = item.findtext("link")
+              date = item.findtext("pubDate")
+              print(f"TITLE={title}")
+              print(f"DATE={date}")
+              print(f"LINK={link}")
+              print("---")
+          PY
