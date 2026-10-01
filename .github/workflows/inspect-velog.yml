@@ -6,25 +6,41 @@ on:
       - ".github/workflows/inspect-velog.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   inspect:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch Velog RSS
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Fetch Velog RSS content
         run: |
           python - <<'PY'
-          import urllib.request, xml.etree.ElementTree as ET
+          import urllib.request, xml.etree.ElementTree as ET, json, pathlib
           url = "https://v2.velog.io/rss/@joker901010"
           data = urllib.request.urlopen(url, timeout=30).read()
           root = ET.fromstring(data)
+          items=[]
           for item in root.findall("./channel/item"):
-              title = item.findtext("title")
-              link = item.findtext("link")
-              date = item.findtext("pubDate")
-              print(f"TITLE={title}")
-              print(f"DATE={date}")
-              print(f"LINK={link}")
-              print("---")
+              items.append({
+                "title": item.findtext("title"),
+                "link": item.findtext("link"),
+                "pubDate": item.findtext("pubDate"),
+                "description": item.findtext("description") or ""
+              })
+          pathlib.Path("_migration").mkdir(exist_ok=True)
+          pathlib.Path("_migration/velog-rss.json").write_text(
+              json.dumps(items, ensure_ascii=False, indent=2),
+              encoding="utf-8"
+          )
           PY
+
+      - name: Commit migration snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _migration/velog-rss.json
+          git commit -m "chore: snapshot Velog RSS for migration" || exit 0
+          git push
