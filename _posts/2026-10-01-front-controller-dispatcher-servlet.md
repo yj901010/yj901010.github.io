@@ -1,6 +1,7 @@
 ---
 title: "Front Controller 패턴에서 DispatcherServlet까지"
-date: 2026-10-01 11:20:00 +0900
+date: 2023-08-30
+last_modified_at: 2026-10-01
 categories: [Backend, Spring]
 tags: [spring-mvc, servlet, dispatcher-servlet, design-pattern]
 description: 과거 FrontController 학습 노트를 바탕으로 Spring MVC의 DispatcherServlet이 왜 필요한지 요청 흐름 중심으로 정리합니다.
