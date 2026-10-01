@@ -1,6 +1,7 @@
 ---
 title: "Java 객체지향을 다시 정리하며: 오버로딩, 오버라이딩, 다형성"
-date: 2026-10-01 11:40:00 +0900
+date: 2023-06-28
+last_modified_at: 2026-10-01
 categories: [Backend, Java]
 tags: [java, oop, polymorphism, overloading, overriding]
 description: 과거 Java 기초 수업 노트 여러 편을 하나로 합쳐 객체지향의 핵심 개념을 다시 정리합니다.
