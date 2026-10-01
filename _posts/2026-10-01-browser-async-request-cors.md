@@ -1,6 +1,7 @@
 ---
 title: "브라우저 비동기 요청을 다시 정리하며: Ajax, fetch, Same-Origin Policy, CORS"
-date: 2026-10-01 13:08:00 +0900
+date: 2023-07-17
+last_modified_at: 2026-10-01
 categories: [Backend, HTTP]
 tags: [ajax, fetch, cors, http, browser]
 description: 과거 Ajax 학습 노트를 바탕으로 브라우저가 서버와 비동기로 통신하는 방식과 Same-Origin Policy, CORS의 관계를 다시 정리합니다.
