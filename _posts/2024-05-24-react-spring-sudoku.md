@@ -5,7 +5,6 @@ last_modified_at: 2026-10-01 11:10:00 +0900
 categories: [Project, Backend]
 tags: [spring-boot, react, cors, backtracking, sudoku]
 description: React와 Spring Boot로 스도쿠 검증·풀이 기능을 만들면서 CORS 문제와 백트래킹 알고리즘을 다뤘던 개인 프로젝트를 다시 정리합니다.
-pin: true
 mermaid: true
 ---
 
