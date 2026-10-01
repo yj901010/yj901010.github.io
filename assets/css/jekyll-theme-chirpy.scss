@@ -23,6 +23,11 @@
   line-height: 1.45;
 }
 
+/* 글 본문 상단의 작성일/수정일은 숨기고, 날짜 값은 정렬·아카이브용으로만 유지 */
+article > header > .post-meta > span {
+  display: none;
+}
+
 .yj-project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
