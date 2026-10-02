@@ -4,9 +4,10 @@ lang: ko-KR
 timezone: Asia/Seoul
 
 title: YJ.DEV
-tagline: Backend Engineering Notes
+tagline: Java · Spring · Database · Architecture
 description: >-
-  백엔드 개발, 데이터베이스, 아키텍처, 인프라와 프로젝트 경험을 기록합니다.
+  Java/Spring 기반 백엔드 개발, 데이터베이스, 아키텍처, 인프라와
+  프로젝트 트러블슈팅을 기록하는 YJ.DEV 기술 블로그입니다.
 
 url: "https://yj901010.github.io"
 baseurl: ""
@@ -18,6 +19,8 @@ social:
   name: YJ
   links:
     - https://github.com/yj901010
+    - https://it-r-b.tistory.com/
+    - https://velog.io/@joker901010
 
 # Search engine ownership verification.
 # Fill these values after registering the site in each webmaster tool.
@@ -27,6 +30,13 @@ webmaster_verifications:
   naver: "fd458da2e4b4312a4242465d34d0b76cb3748d27"
 
 theme_mode:
+
+# Analytics can be enabled later by filling in one ID.
+analytics:
+  google:
+    id:
+  goatcounter:
+    id:
 
 toc: true
 
