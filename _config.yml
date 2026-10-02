@@ -34,7 +34,7 @@ theme_mode:
 # Analytics can be enabled later by filling in one ID.
 analytics:
   google:
-    id:
+    id: "G-03VYEHFRBH"
   goatcounter:
     id:
 
