@@ -22,9 +22,9 @@ social:
 # Search engine ownership verification.
 # Fill these values after registering the site in each webmaster tool.
 webmaster_verifications:
-  google:
-  bing:
-  naver:
+  google: "t2C9C-Xielf5EeAYedD6UDToyU8ZfeToPInh4ET8zVg"
+  bing: "CCC82CA19AF98915D2B6FC5C6EAC2416"
+  naver: "fd458da2e4b4312a4242465d34d0b76cb3748d27"
 
 theme_mode:
 
