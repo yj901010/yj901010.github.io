@@ -19,6 +19,13 @@ social:
   links:
     - https://github.com/yj901010
 
+# Search engine ownership verification.
+# Fill these values after registering the site in each webmaster tool.
+webmaster_verifications:
+  google:
+  bing:
+  naver:
+
 theme_mode:
 
 toc: true
