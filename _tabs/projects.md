@@ -1,7 +1,7 @@
 ---
 title: Projects
 icon: fas fa-diagram-project
-order: 4
+order: 5
 ---
 
 백엔드 프로젝트와 기술적 의사결정 과정을 정리합니다.
